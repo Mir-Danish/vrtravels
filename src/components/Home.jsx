@@ -3,8 +3,8 @@ import "./home.css"
 import TravelLandingSection from './Offers&Features'
 import TourGallerySection from './Tourgallery'
 import picture1 from "../assets/p1.png"
-import picture2 from "../assets/p2.png"
 import picture3 from "../assets/p3.png"
+import myVideo from "../assets/images/video.mp4"
 
 function Home() {
   return (
@@ -25,7 +25,11 @@ function Home() {
         </div>
         <div className='right-container'>
             <img src={picture1} alt="image from assets" className='image1'/>
-            <img src={picture2} alt="" className='image2'/>
+            {/* <img src={picture2} alt="" className='image2'/> */}
+            <video className='videostyle' controls={false}>
+              <source src={myVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <img src={picture3} alt="" className='image3'/>
         </div>
     </div>

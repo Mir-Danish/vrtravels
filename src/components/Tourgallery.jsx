@@ -8,31 +8,31 @@ export default function TourGallerySection() {
 
       <div className="gallery-grid">
         <div className="gallery-item tall">
-          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326389/C1_l2evec.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326517/C2_yg4ivj.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326573/C3_nal2vz.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326608/C4_itmeof.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326637/C5_jpu3jf.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326655/C6_x3xysx.png" alt="tour" />
         </div>
 
         <div className="gallery-item">
-          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="tour" />
+          <img src="https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326700/C8_mb2srs.png" alt="tour" />
         </div>
       </div>
 

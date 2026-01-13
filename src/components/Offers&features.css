@@ -2,3 +2,14 @@
     font-family: "serif";
     font-size: 40px;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=YourFontName&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.OfferMainContainer{
+          display: flex;
+          background-image: url("../assets/images/servicebg.png");
+          background-size: cover;
+      
+        }
