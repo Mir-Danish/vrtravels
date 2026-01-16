@@ -20,14 +20,16 @@
 .navbar-logo img {
   width: 120px;
   height: 70px;
+  margin-left: 20px;
 }
 
 .navbar a {
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
   font-weight: bold;
   margin: 0 1rem;
   padding: 0.5rem 1rem;
-  color: black;
+  color: #0B2727;
 }
 
 .navbar a:hover {

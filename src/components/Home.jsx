@@ -26,7 +26,7 @@ function Home() {
         <div className='right-container'>
             <img src={picture1} alt="image from assets" className='image1'/>
             {/* <img src={picture2} alt="" className='image2'/> */}
-            <video className='videostyle' controls={false}>
+            <video className='videostyle' controls={true}>
               <source src={myVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
