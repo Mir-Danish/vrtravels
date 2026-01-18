@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="footer-content">
-        
+
         {/* Column 1: Logo & Socials */}
         <div className="footer-col">
           <div className="footer-logo">
@@ -16,19 +16,19 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.
           </p>
           <div className="social-icons">
-  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-    <div className="icon-circle"><Youtube size={18} /></div>
-  </a>
-  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-    <div className="icon-circle"><Twitter size={18} /></div>
-  </a>
-  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-    <div className="icon-circle"><Facebook size={18} /></div>
-  </a>
-  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-    <div className="icon-circle"><Instagram size={18} /></div>
-  </a>
-</div>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <div className="icon-circle"><Youtube size={18} /></div>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <div className="icon-circle"><Twitter size={18} /></div>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <div className="icon-circle"><Facebook size={18} /></div>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-link">
+              <div className="icon-circle"><Instagram size={18} /></div>
+            </a>
+          </div>
         </div>
 
         {/* Column 2: Discover */}
@@ -56,23 +56,23 @@ const Footer = () => {
           <h3>Contact</h3>
           <div className="contact-item">
             <MapPin className="contact-icon" size={18} />
-            <p><strong>Address :</strong> Lorem</p>
+            <p><strong>Address :</strong>Rakhi Shilvat Sumbal Bandipora J&K-193501</p>
           </div>
           <div className="contact-item">
             <Mail className="contact-icon" size={18} />
-            <p><strong>Email :</strong> xyz@mail.com</p>
+            <p><strong>Email :</strong>velarovatours@gmail.com</p>
           </div>
           <div className="contact-item">
             <Phone className="contact-icon" size={18} />
-            <p><strong>Phone :</strong> 00022200222</p>
+            <p><strong>Phone :</strong> +91 9103115848</p>
           </div>
         </div>
 
       </div>
 
-      <div className="footer-bottom">
+      {/* <div className="footer-bottom">
         <p>© 2024 <span className="highlight">Vipin_uidesigns</span>. All Rights Reserved</p>
-      </div>
+      </div> */}
     </footer>
   );
 };

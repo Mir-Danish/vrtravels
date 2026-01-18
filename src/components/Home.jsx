@@ -6,6 +6,7 @@ import picture1 from "../assets/p1.png"
 import picture3 from "../assets/p3.png"
 import myVideo from "../assets/images/video.mp4"
 import Footer from './Footer'
+import TourPlans from './TourPlans'
 
 function Home() {
   return (
@@ -34,8 +35,10 @@ function Home() {
           <img src={picture3} alt="" className='image3' />
         </div>
       </div>
+      <TourPlans />
       <TravelLandingSection />
       {/* <TourGallerySection /> */}
+
       <Footer />
     </>
   )
