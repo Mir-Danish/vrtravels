@@ -1,11 +1,11 @@
-.transport-container{
+.transport-container {
     display: flex;
     background-image: url('../assets//images/bgimage.png');
     background-size: cover;
-    height: 400px;
+    height: 300px;
 }
 
-.Headers{
+.Headers {
     display: flex;
     flex-direction: row;
     gap: 7px;
@@ -14,19 +14,19 @@
     margin-left: 520px;
 }
 
-.Header-text{
+.Header-text {
     font-size: 50px;
     color: #FAA935;
 }
 
-.sub-heading{
+.sub-heading {
     font-size: 50px;
     color: white;
-    
+
 }
 
 
-.tour-heading{
+.tour-heading {
     font-family: "Poppins";
     font-size: 35px;
     font-weight: medium;
@@ -34,46 +34,94 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-   
+
 }
 
-.image-container{
+/* Main Grid Container */
+.vehicles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vehicle-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    
-
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
 }
 
-.left-container{
+/* Card Base Styles */
+.vehicle-card {
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    /* Removed the yellow border for a cleaner look, or we can keep it subtle */
+}
+
+/* Hover Effect */
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Individual Card Specifics */
+.left-vehicle-image-container {
     background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768581966/1v_bpzrye.png");
-    background-size: cover;
-    border: 1px solid black;
-    width: 500px;
-    height: 370px;
+    width: 450px;
+    height: 300px;
 }
 
-.right-container{
+.right-vehicle-image-container {
     background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768582608/2v_srjut8.png");
-    background-size: cover;
-    border: 1px solid black;
-    width: 500px;
-    height: 370px;  
+    width: 380px;
+    height: 300px;
 }
 
-.bottom-left-container{
-    border: 1px solid black;
+.bottom-left-container {
     background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768582606/5v_qtbuh2.png");
-    background-size: cover;
-    width: 500px;
-    height: 370px;  
+    width: 380px;
+    height: 300px;
 }
 
+.bottom-right-container {
+    background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768584595/7v_alxkov.png");
+    width: 450px;
+    height: 300px;
+}
 
-.bottom-right-container{
-    border: 1px solid black;
-    background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768582606/5v_qtbuh2.png");
-    background-size: cover;
-    width: 500px;
-    height: 370px;  
+.long-container {
+    background-image: url("https://res.cloudinary.com/dcarnhdrh/image/upload/v1768582606/3v_bnunwx.png");
+    width: 100%;
+    max-width: 860px;
+    /* Reduced to match the tighter row width (450+30+380 = 860) */
+    height: 350px;
+}
+
+/* Optional: Add a subtle overlay on hover to make it feel expensive */
+.vehicle-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vehicle-card:hover::after {
+    opacity: 1;
 }

@@ -10,7 +10,7 @@ export default function TravelLandingSection() {
   return (
     <div className="page">
       {/* Services */}
-      <section className="services">
+      {/* <section className="services">
         <div className="services-header">
           <span className="tag">What we serve</span>
           <p className="sub-heading">We offer our best services</p>
@@ -33,7 +33,7 @@ export default function TravelLandingSection() {
             <p>Lorem ipsum dolor sit amet, adipisicing elit.</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Tours */}
       <section className="tours">
