@@ -87,7 +87,7 @@ function TourPlans() {
                             <div className="tour-buttons">
                                 <a href="tel:+916006708888" className="btn-phone">
                                     <Phone size={16} fill="white" />
-                                    +91 9103115848
+                                    +919103115848
                                 </a>
                                 <button className="btn-enquire">
                                     Book Now

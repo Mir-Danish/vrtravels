@@ -7,6 +7,7 @@ import picture3 from "../assets/p3.png"
 import myVideo from "../assets/images/video.mp4"
 import Footer from './Footer'
 import TourPlans from './TourPlans'
+import WhatsAppButton from './WhatsAppButton'
 
 function Home() {
   return (
@@ -40,6 +41,7 @@ function Home() {
       {/* <TourGallerySection /> */}
 
       <Footer />
+      <WhatsAppButton />
     </>
   )
 }
