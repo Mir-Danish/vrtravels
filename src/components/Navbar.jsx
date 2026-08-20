@@ -1,29 +1,74 @@
-
-import { Link } from 'react-router-dom';
-import "../components/navbar.css";
-import Logo from "../assets/images/Logo2.png"
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './navbar.css';
+import Logo from '../assets/images/Logo2.png';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  return (
-    <nav className="navbar">
-      {/* <div>
-            <img src='https://cdn.pixabay.com/photo/2016/03/17/07/02/starbucks-1262392_640.jpg' alt='' className='logoimage' />  
-        </div> */}
-      <div className='navbar-logo'>
-        <img src={Logo} alt='logo' />
-      </div>
+    const [scrolled, setScrolled] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const location = useLocation();
 
-      <div className="navbar-links">
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 20);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-        <Link to="/">Home</Link>
-        <Link to="/Transport">Transport</Link>
-        <Link to="/AboutPage">About</Link>
-        <Link to="/Tourgallery">Tours</Link>
-      </div>
-    </nav>
-  );
+    useEffect(() => {
+        setMenuOpen(false);
+    }, [location]);
+
+    return (
+        <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+            <div className="navbar-logo">
+                <img src={Logo} alt="Velarova Tours Logo" />
+            </div>
+
+            {/* Desktop Links */}
+            <div className="navbar-links">
+                <Link to="/" className={location.pathname === '/' ? 'nav-active' : ''}>Home</Link>
+                <Link to="/Transport" className={location.pathname === '/Transport' ? 'nav-active' : ''}>Transport</Link>
+                <Link to="/AboutPage" className={location.pathname === '/AboutPage' ? 'nav-active' : ''}>About</Link>
+                <Link to="/Tourgallery" className={location.pathname === '/Tourgallery' ? 'nav-active' : ''}>Tours</Link>
+            </div>
+
+            {/* Book Now CTA */}
+            <a
+                href="https://wa.me/919103115848?text=Hello%20Velarova%20Tours,%20I%20want%20to%20book%20a%20trip!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navbar-cta"
+            >
+                Book Now
+            </a>
+
+            {/* Mobile Hamburger */}
+            <button
+                className="navbar-hamburger"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle navigation menu"
+            >
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Mobile Drawer */}
+            <div className={`navbar-mobile-drawer ${menuOpen ? 'drawer-open' : ''}`}>
+                <Link to="/" className={location.pathname === '/' ? 'nav-active' : ''}>Home</Link>
+                <Link to="/Transport" className={location.pathname === '/Transport' ? 'nav-active' : ''}>Transport</Link>
+                <Link to="/AboutPage" className={location.pathname === '/AboutPage' ? 'nav-active' : ''}>About</Link>
+                <Link to="/Tourgallery" className={location.pathname === '/Tourgallery' ? 'nav-active' : ''}>Tours</Link>
+                <a
+                    href="https://wa.me/919103115848?text=Hello%20Velarova%20Tours,%20I%20want%20to%20book%20a%20trip!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="navbar-cta drawer-cta"
+                >
+                    Book Now
+                </a>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;
-
-

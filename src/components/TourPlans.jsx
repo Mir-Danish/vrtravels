@@ -45,8 +45,9 @@ function TourPlans() {
     return (
         <div className="tour-plans-container">
             <div className="tour-plans-header">
-                <h2 className="tour-plans-title">OUR BEST OFFERINGS</h2>
-                <p className="tour-plans-subtitle">Let us plan your trip.</p>
+                <span className="tour-plans-eyebrow">Kashmir Tour Packages</span>
+                <h2 className="tour-plans-title">Our Best <span>Offerings</span></h2>
+                <p className="tour-plans-subtitle">Handcrafted itineraries built by locals who know every trail, every lake, and every hidden gem of the valley.</p>
             </div>
 
             <div className="tour-plans-grid">

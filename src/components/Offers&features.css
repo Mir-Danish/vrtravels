@@ -1,15 +1,170 @@
-/* .sub-heading {
-    font-family: "serif";
-    font-size: 40px;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=YourFontName&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* ==========================================================================
+   Offers & Features — Featured Tours Bento Grid
+   Matches Kashmir Design System
+   ========================================================================== */
 
+.page {
+    padding: 90px 6%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+}
 
-.OfferMainContainer{
-          display: flex;
-          background-image: url("../assets/images/servicebg.png");
-          background-size: cover;
-      
-        }
+/* Section Tag (eyebrow) */
+.tag {
+    display: inline-block;
+    background: rgba(250, 169, 53, 0.14);
+    color: #d97706;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Tours Section Header */
+.tours h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 36px 0;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+}
+
+/* Tour Bento Grid */
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 230px;
+    gap: 18px;
+}
+
+/* Base Tour Card */
+.tour {
+    position: relative;
+    border-radius: 22px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tour:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.tour.big {
+    grid-row: span 2;
+}
+
+.tour.wide {
+    grid-column: span 2;
+}
+
+/* Dark gradient overlay — bottom up */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.85) 0%,
+        rgba(15, 23, 42, 0.2) 50%,
+        transparent 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    color: #fff;
+    transition: background 0.4s ease;
+}
+
+.tour:hover .overlay {
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.9) 0%,
+        rgba(15, 23, 42, 0.3) 60%,
+        transparent 100%
+    );
+}
+
+/* Place Name */
+.Place-Names {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+    transition: transform 0.35s ease;
+}
+
+.tour:hover .Place-Names {
+    transform: translateY(-4px);
+}
+
+/* Country/Region Label */
+.overlay span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #FAA935;
+    opacity: 1;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.overlay span::before {
+    content: '📍';
+    font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .tour-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 210px;
+    }
+
+    .tour.big {
+        grid-row: span 1;
+    }
+
+    .tour.wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .page {
+        padding: 60px 5%;
+    }
+
+    .tour-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .tour.big,
+    .tour.wide {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .tours h2 {
+        font-size: 2rem;
+    }
+}

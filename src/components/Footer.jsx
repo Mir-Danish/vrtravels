@@ -72,9 +72,9 @@ const Footer = () => {
 
       </div>
 
-      {/* <div className="footer-bottom">
-        <p>© 2024 <span className="highlight">Vipin_uidesigns</span>. All Rights Reserved</p>
-      </div> */}
+      <div className="footer-copyright">
+        <p>© 2025 <span>Velarova Tours</span> — Bandipora, Kashmir. All Rights Reserved.</p>
+      </div>
     </footer>
   );
 };
