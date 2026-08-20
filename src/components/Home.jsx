@@ -9,6 +9,8 @@ import Footer from './Footer'
 import TourPlans from './TourPlans'
 import WhatsAppButton from './WhatsAppButton'
 
+
+//Home Page here
 function Home() {
   return (
     <>

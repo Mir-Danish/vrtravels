@@ -1,6 +1,8 @@
 import { Youtube, Twitter, Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import './Footer.css';
 
+
+//Footer Component
 const Footer = () => {
   return (
     <footer className="footer-container">
