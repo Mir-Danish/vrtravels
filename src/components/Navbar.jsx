@@ -21,9 +21,9 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-            <div className="navbar-logo">
+            <Link to="/" className="navbar-logo">
                 <img src={Logo} alt="Velarova Tours Logo" />
-            </div>
+            </Link>
 
             {/* Desktop Links */}
             <div className="navbar-links">
@@ -32,16 +32,6 @@ const Navbar = () => {
                 <Link to="/AboutPage" className={location.pathname === '/AboutPage' ? 'nav-active' : ''}>About</Link>
                 <Link to="/Tourgallery" className={location.pathname === '/Tourgallery' ? 'nav-active' : ''}>Tours</Link>
             </div>
-
-            {/* Book Now CTA */}
-            <a
-                href="https://wa.me/919103115848?text=Hello%20Velarova%20Tours,%20I%20want%20to%20book%20a%20trip!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="navbar-cta"
-            >
-                Book Now
-            </a>
 
             {/* Mobile Hamburger */}
             <button
@@ -64,7 +54,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="navbar-cta drawer-cta"
                 >
-                    Book Now
+                    Book on WhatsApp
                 </a>
             </div>
         </nav>
