@@ -3,7 +3,6 @@ import './home.css';
 import TravelLandingSection from './Offers&Features';
 import picture1 from '../assets/p1.png';
 import picture3 from '../assets/p3.png';
-import myVideo from '../assets/images/video.mp4';
 import Footer from './Footer';
 import TourPlans from './TourPlans';
 import WhatsAppButton from './WhatsAppButton';
@@ -56,7 +55,7 @@ function Home() {
                 <div className="right-container">
                     <img src={picture1} alt="Kashmir valley scenic view" className="image1" />
                     <video className="videostyle" autoPlay loop muted playsInline>
-                        <source src={myVideo} type="video/mp4" />
+                        <source src="https://res.cloudinary.com/ddu2t6hej/video/upload/v1787729510/video_zznpxe.mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <img src={picture3} alt="Beautiful Kashmir landscape" className="image3" />

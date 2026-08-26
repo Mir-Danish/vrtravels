@@ -21,9 +21,15 @@ const Navbar = () => {
 
     return (
         <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-            <Link to="/" className="navbar-logo">
+            <a
+                href={Logo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navbar-logo"
+                title="View Logo"
+            >
                 <img src={Logo} alt="Velarova Tours Logo" />
-            </Link>
+            </a>
 
             {/* Desktop Links */}
             <div className="navbar-links">
