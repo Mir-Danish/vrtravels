@@ -13,102 +13,135 @@ import {
   Sparkles,
   Users,
   ShieldCheck,
-  HeartHandshake,
   MessageCircle,
   ArrowRight
 } from "lucide-react";
+
+// Verified project assets for authentic Kashmir locations
+import GulmargGondolaImg from "../assets/Off1.png";
+import DoodhpathriImg from "../assets/Off3.png";
+import SonamargZeroPointImg from "../assets/Off4.png";
+import PahalgamRiverImg from "../assets/Off5.png";
+import SrinagarTulipImg from "../assets/Off6.png";
 
 const galleryItems = [
   {
     id: 1,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326389/C1_l2evec.png",
-    title: "Gulmarg Snow Wonderland",
-    location: "Aphrawat Peak, Gulmarg",
+    title: "Gulmarg Snow Slopes & Pine Hills",
+    location: "Kongdoori, Gulmarg",
     category: "gulmarg",
     layout: "tall",
-    story: "Ascending to 14,000 feet on the Gulmarg Gondola amidst fresh powdery snow and endless Himalayan vistas."
+    story: "Walking across the pristine, snow-blanketed slopes of Kongdoori with pine forests and snow peaks all around."
   },
   {
     id: 2,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326517/C2_yg4ivj.png",
-    title: "Snow Play & Mountain Fun",
-    location: "Gulmarg Alpine Valley",
-    category: "gulmarg",
+    title: "Thajiwas Mountain Peaks in Winter",
+    location: "Thajiwas Range, Sonamarg",
+    category: "sonamarg",
     layout: "normal",
-    story: "Pure laughter and winter joy with warm Kashmiri Kahwa waiting by the cozy wooden lodge."
+    story: "Towering snow-draped rocky cliffs and silent winter pine trees standing tall against a bright blue sky."
   },
   {
     id: 3,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326573/C3_nal2vz.png",
-    title: "Baisaran Pine Valley Trek",
-    location: "Mini Switzerland, Pahalgam",
-    category: "pahalgam",
+    title: "Snow Ridge & Viewpoint Gazebo",
+    location: "Snow Valley, Gulmarg",
+    category: "gulmarg",
     layout: "normal",
-    story: "Riding gentle mountain ponies through dense deodar forests opening up to lush, emerald green meadows."
+    story: "Scenic hillside gazebo and snowmobile tracks overlooking sea-like mist rolling across the Himalayan slopes."
   },
   {
     id: 4,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326608/C4_itmeof.png",
-    title: "Serene Sunset Shikara Ride",
-    location: "Dal Lake, Srinagar",
-    category: "dallake",
+    title: "Snowmobile Safari with Travelers",
+    location: "Snow Activity Point, Gulmarg",
+    category: "gulmarg",
     layout: "wide",
-    story: "Gliding across calm waters as the golden sun dips behind the Zabarwan range, with floating flower markets all around."
+    story: "Excited travelers geared up on snowmobiles for an adrenaline-pumping ride across the deep Gulmarg snowfields."
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326637/C5_jpu3jf.png",
-    title: "Thajiwas Glacier Majesty",
-    location: "Sonamarg Meadow of Gold",
-    category: "sonamarg",
+    src: GulmargGondolaImg,
+    title: "Gulmarg Gondola Cable Car",
+    location: "Apharwat Peak, Gulmarg",
+    category: "gulmarg",
     layout: "normal",
-    story: "Walking up to glistening glacial streams surrounded by towering snow-capped peaks in Sonamarg."
+    story: "Asia's highest operating cable car carrying visitors up to Phase 2 with sweeping snow-covered Himalayan views."
   },
   {
     id: 6,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326655/C6_x3xysx.png",
-    title: "Kashmiri Hospitality with Family",
-    location: "Mughal Gardens, Srinagar",
-    category: "groups",
+    title: "Ponies Grazing in Baisaran Meadow",
+    location: "Baisaran (Mini Switzerland), Pahalgam",
+    category: "pahalgam",
     layout: "tall",
-    story: "Warm smiles, genuine hospitality (Mezbaani), and unforgettable moments spent with our beloved tour group."
+    story: "Gentle mountain ponies roaming freely across lush green pastures framed by soaring rocky peaks."
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=1200&auto=format&fit=crop",
-    title: "Crystal Waters of Lidder River",
+    src: PahalgamRiverImg,
+    title: "Lidder River Through Pine Forests",
     location: "Betaab Valley, Pahalgam",
     category: "pahalgam",
     layout: "normal",
-    story: "Listening to the gentle roar of the Lidder river against a backdrop of towering pine valleys."
+    story: "Crystal-clear glacier waters of the Lidder river rushing through verdant pines and mist-draped peaks."
   },
   {
     id: 8,
     src: "https://res.cloudinary.com/dcarnhdrh/image/upload/v1768326700/C8_mb2srs.png",
-    title: "Heritage Cedar Houseboat Stay",
-    location: "Nigeen Lake, Srinagar",
-    category: "dallake",
+    title: "Sunlit Meadow of Gold",
+    location: "Sindh Valley, Sonamarg",
+    category: "sonamarg",
     layout: "normal",
-    story: "Waking up to misty morning reflections and intricate Kashmiri walnut wood carvings on serene lake waters."
+    story: "Sunlight pouring through alpine clouds onto rolling emerald meadows where horses graze peacefully."
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1200&auto=format&fit=crop",
-    title: "Golden Meadow Expedition",
-    location: "Zero Point, Sonamarg",
+    src: SonamargZeroPointImg,
+    title: "Zero Point Snow Pass & Bridge",
+    location: "Zojila Pass, Sonamarg",
     category: "sonamarg",
     layout: "wide",
-    story: "Crossing adventurous mountain passes surrounded by dramatic rocky cliffs and year-round snow cover."
+    story: "Dramatic high-altitude mountain pass where crisp blue skies meet snow-capped peaks and glacial streams."
+  },
+  {
+    id: 10,
+    src: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1200&auto=format&fit=crop",
+    title: "Heritage Wooden Houseboats",
+    location: "Dal Lake, Srinagar",
+    category: "srinagar",
+    layout: "wide",
+    story: "Handcrafted cedar wood houseboats gently resting along the serene waters of Dal Lake under the Zabarwan range."
+  },
+  {
+    id: 11,
+    src: SrinagarTulipImg,
+    title: "Vibrant Tulip Garden in Bloom",
+    location: "Zabarwan Foothills, Srinagar",
+    category: "srinagar",
+    layout: "normal",
+    story: "Millions of blooming tulips in vivid colors spreading across Asia's largest tulip garden during spring."
+  },
+  {
+    id: 12,
+    src: DoodhpathriImg,
+    title: "Emerald Meadows of Doodhpathri",
+    location: "Valley of Milk, Doodhpathri",
+    category: "doodhpathri",
+    layout: "normal",
+    story: "Lush green carpet meadows dotted with grazing herds, babbling streams, and tranquil Kashmiri shepherd huts."
   }
 ];
 
 const filterCategories = [
-  { id: "all", label: "All Memories" },
-  { id: "gulmarg", label: "Gulmarg Snow & Gondola" },
-  { id: "dallake", label: "Dal Lake & Houseboats" },
-  { id: "pahalgam", label: "Pahalgam Pine Valleys" },
-  { id: "sonamarg", label: "Sonamarg Glaciers" },
-  { id: "groups", label: "Groups & Hospitality" }
+  { id: "all", label: "All Destinations" },
+  { id: "gulmarg", label: "Gulmarg (Snow & Gondola)" },
+  { id: "pahalgam", label: "Pahalgam (Valleys & Rivers)" },
+  { id: "sonamarg", label: "Sonamarg (Glaciers & Peaks)" },
+  { id: "srinagar", label: "Srinagar (Lakes & Gardens)" },
+  { id: "doodhpathri", label: "Doodhpathri (Meadows)" }
 ];
 
 export default function TourGallerySection() {
@@ -231,7 +264,7 @@ export default function TourGallerySection() {
             Captured <span>Memories</span>
           </h2>
           <p>
-            Filter by destination to view real moments from Shikara rides on Dal Lake to snow adventures in Gulmarg.
+            Filter by destination to view authentic photo moments from Gulmarg snow slopes to tranquil houseboats on Dal Lake.
           </p>
         </div>
 
@@ -353,7 +386,9 @@ export default function TourGallerySection() {
               <a
                 href={`https://wa.me/919103115848?text=Hello%20Velarova%20Tours,%20I%20saw%20the%20${encodeURIComponent(
                   filteredItems[selectedImageIndex].title
-                )}%20photo%20in%20your%20gallery%20and%20want%20to%20plan%20a%20similar%20trip!`}
+                )}%20(${encodeURIComponent(
+                  filteredItems[selectedImageIndex].location
+                )})%20in%20your%20gallery%20and%20want%20to%20plan%20a%20similar%20trip!`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal-action-btn"
@@ -408,7 +443,7 @@ export default function TourGallerySection() {
                   ))}
                 </div>
                 <p className="story-quote-body">
-                  &ldquo;The sunset Shikara ride and cozy houseboat on Nigeen Lake with authentic hot Kehwa was the highlight of our honeymoon. Velarova handled every single detail with true warmth.&rdquo;
+                  &ldquo;The morning mist over Dal Lake and our stay on a cedar houseboat with hot Kashmiri Kehwa was the highlight of our honeymoon. Velarova handled every single detail with true warmth.&rdquo;
                 </p>
               </div>
               <div className="story-author-row">

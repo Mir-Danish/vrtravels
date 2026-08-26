@@ -201,6 +201,7 @@
     border: 2.5px solid rgba(250, 169, 53, 0.6);
     object-fit: cover;
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
 }
 
 /* ==========================================================================

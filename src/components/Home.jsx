@@ -55,7 +55,7 @@ function Home() {
 
                 <div className="right-container">
                     <img src={picture1} alt="Kashmir valley scenic view" className="image1" />
-                    <video className="videostyle" controls={true}>
+                    <video className="videostyle" autoPlay loop muted playsInline>
                         <source src={myVideo} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>

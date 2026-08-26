@@ -1,79 +1,101 @@
-import { Youtube, Twitter, Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import './Footer.css';
 
-
-//Footer Component
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
 
         {/* Column 1: Logo & Socials */}
-        <div className="footer-col">
-          <div className="footer-logo">
+        <div className="footer-col footer-brand-col">
+          <Link to="/" onClick={scrollToTop} className="footer-logo">
             <span className="logo-black">VELA</span>
             <span className="logo-orange">ROVA</span>
-          </div>
+          </Link>
           <p className="footer-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.
+            Discover the magic of Kashmir with authentic local hospitality, handcrafted itineraries, and 24/7 on-ground support.
           </p>
           <div className="social-icons">
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-              <div className="icon-circle"><Youtube size={18} /></div>
+            <a
+              href="https://www.facebook.com/share/1DX2AtqXAG/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              aria-label="Facebook"
+            >
+              <div className="icon-circle">
+                <Facebook size={18} />
+              </div>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-              <div className="icon-circle"><Twitter size={18} /></div>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-              <div className="icon-circle"><Facebook size={18} /></div>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-link">
-              <div className="icon-circle"><Instagram size={18} /></div>
+            <a
+              href="https://www.instagram.com/vela_rova?igsi=MWUwc3htbHQ2NXNyeg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              aria-label="Instagram"
+            >
+              <div className="icon-circle">
+                <Instagram size={18} />
+              </div>
             </a>
           </div>
         </div>
 
-        {/* Column 2: Discover */}
-        <div className="footer-col">
-          <h3>Discover</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#tours">Tours</a></li>
-          </ul>
-        </div>
-
-        {/* Column 3: Quick Links */}
-        <div className="footer-col">
+        {/* Column 2: Navigation Links */}
+        <div className="footer-col footer-links-col">
           <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#register">Register</a></li>
+          <ul className="footer-nav-list">
+            <li>
+              <Link to="/" onClick={scrollToTop}>Home</Link>
+            </li>
+            <li>
+              <Link to="/Transport" onClick={scrollToTop}>Transport</Link>
+            </li>
+            <li>
+              <Link to="/AboutPage" onClick={scrollToTop}>About</Link>
+            </li>
+            <li>
+              <Link to="/Tourgallery" onClick={scrollToTop}>Tours</Link>
+            </li>
           </ul>
         </div>
 
-        {/* Column 4: Contact */}
-        <div className="footer-col">
-          <h3>Contact</h3>
+        {/* Column 3: Contact */}
+        <div className="footer-col footer-contact-col">
+          <h3>Contact Us</h3>
           <div className="contact-item">
-            <MapPin className="contact-icon" size={18} />
-            <p><strong>Address :</strong>Rakhi Shilvat Sumbal Bandipora J&K-193501</p>
+            <MapPin className="contact-icon" size={19} />
+            <p>
+              <strong>Address:</strong>
+              <span>Rakhi Shilvat Sumbal, Bandipora, J&amp;K - 193501</span>
+            </p>
           </div>
           <div className="contact-item">
-            <Mail className="contact-icon" size={18} />
-            <p><strong>Email :</strong>velarovatours@gmail.com</p>
+            <Mail className="contact-icon" size={19} />
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:velarovatours@gmail.com" className="contact-link">velarovatours@gmail.com</a>
+            </p>
           </div>
           <div className="contact-item">
-            <Phone className="contact-icon" size={18} />
-            <p><strong>Phone :</strong> +91 9103115848</p>
+            <Phone className="contact-icon" size={19} />
+            <p>
+              <strong>Phone / WhatsApp:</strong>
+              <a href="https://wa.me/919103115848" target="_blank" rel="noopener noreferrer" className="contact-link">+91 9103115848</a>
+            </p>
           </div>
         </div>
 
       </div>
 
       <div className="footer-copyright">
-        <p>© 2025 <span>Velarova Tours</span> — Bandipora, Kashmir. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} <span>Velarova Tours</span> — Bandipora, Kashmir. All Rights Reserved.</p>
       </div>
     </footer>
   );

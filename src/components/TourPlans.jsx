@@ -2,42 +2,49 @@ import React from 'react'
 import './TourPlans.css'
 import { Car, Utensils, Eye, Hotel, Phone } from 'lucide-react'
 
+// Authentic Kashmir destination images
+import GulmargGondolaImg from '../assets/Off1.png';
+import GurezValleyImg from '../assets/Off2.png';
+import LehPassImg from '../assets/Off4.png';
+import PahalgamRiverImg from '../assets/Off5.png';
+import SrinagarTulipImg from '../assets/Off6.png';
+
 const tourPackages = [
     {
         id: 1,
         title: 'KASHMIR HONEYMOON PACKAGE',
         duration: '5 NIGHTS/6 DAYS',
-        image: 'https://images.unsplash.com/photo-1566837945700-30057527ade0?q=80&w=2070&auto=format&fit=crop', // Snow/Couple theme
+        image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?q=80&w=1200&auto=format&fit=crop', // Dal Lake Houseboats with snow mountains
     },
     {
         id: 2,
         title: 'LEH LADAKH TOUR',
         duration: '5 NIGHTS/6 DAYS',
-        image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=2070&auto=format&fit=crop', // Mountains/Lake
+        image: LehPassImg, // High mountain pass & snow peaks
     },
     {
         id: 3,
         title: 'KASHMIR TOUR PACKAGE',
         duration: '6 NIGHTS/7 DAYS',
-        image: 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=2070&auto=format&fit=crop', // Green valley
+        image: PahalgamRiverImg, // Lidder River and pine mountains
     },
     {
         id: 4,
         title: 'CHARISMATIC KASHMIR WITH GULMARG',
         duration: '5 NIGHTS/6 DAYS',
-        image: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=2070&auto=format&fit=crop', // Lake/Boats
+        image: GulmargGondolaImg, // Gulmarg Gondola in snow
     },
     {
         id: 5,
-        title: 'AMARNATH YATRA BY HELICOPTER',
-        duration: '3 NIGHTS/4 DAYS',
-        image: 'https://images.unsplash.com/photo-1518182703889-138249079ced?q=80&w=2070&auto=format&fit=crop', // Mountains/Helicopter vibe
+        title: 'GUREZ VALLEY OFFBEAT TOUR',
+        duration: '4 NIGHTS/5 DAYS',
+        image: GurezValleyImg, // Gurez Valley scenic river & mountains
     },
     {
         id: 6,
         title: 'SRINAGAR TOUR PACKAGE',
         duration: '4 NIGHTS/5 DAYS',
-        image: 'https://images.unsplash.com/photo-1567808291548-79b885965e98?q=80&w=2070&auto=format&fit=crop', // Tulip garden
+        image: SrinagarTulipImg, // Tulip Garden in Srinagar
     }
 ]
 
@@ -86,13 +93,20 @@ function TourPlans() {
                             </div>
 
                             <div className="tour-buttons">
-                                <a href="tel:+916006708888" className="btn-phone">
+                                <a href="tel:+919103115848" className="btn-phone">
                                     <Phone size={16} fill="white" />
                                     +919103115848
                                 </a>
-                                <button className="btn-enquire">
+                                <a
+                                    href={`https://wa.me/919103115848?text=${encodeURIComponent(
+                                        `Hello Velarova Tours, I want to book the ${pkg.title} (${pkg.duration})!`
+                                    )}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-enquire"
+                                >
                                     Book Now
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

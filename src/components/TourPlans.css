@@ -214,12 +214,17 @@
     font-weight: 700;
     cursor: pointer;
     font-size: 0.85rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .btn-enquire:hover {
     background: #fbbf24;
     transform: translateY(-2px);
+    color: #111827;
 }
 
 /* Responsive */
