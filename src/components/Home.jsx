@@ -6,7 +6,7 @@ import picture3 from '../assets/p3.png';
 import Footer from './Footer';
 import TourPlans from './TourPlans';
 import WhatsAppButton from './WhatsAppButton';
-import { MapPin, ArrowRight, Star } from 'lucide-react';
+import { MapPin, ArrowRight, Star, ShieldCheck } from 'lucide-react';
 
 function Home() {
     return (
@@ -24,14 +24,14 @@ function Home() {
                     <p className="p1">Know Before You Go</p>
 
                     <h1 className="p2">
-                        Travelling Opens the Door to <span>Creating Memories</span>
+                        Travelling Opens the Door to <span>Unforgettable Memories</span>
                     </h1>
+                    <p className="hero-welcome-line">Welcome to <span>Velarova Tour & Travels</span></p>
 
                     <p className="p4">
-                        Nestled in the heart of the Himalayas, Kashmir is a land of shimmering lakes,
-                        snow-draped peaks, and warm Kashmiri souls. Let Velarova Tours guide you
-                        through every unforgettable corner of the valley — from tranquil Shikara rides
-                        on Dal Lake to the golden meadows of Sonamarg.
+                        Welcome to Vela rova Tours and travels your trusted travel partner for discovering the breathtaking beauty of Kashmir. From majestic mountains and serene lakes to rich culture and unforgettable experiences, we help you explore Kashmir in the most memorable way.
+                        Whether you are planning a family holiday, honeymoon, adventure trip, group tour, or a customized getaway.
+                        Discover Kashmir. Create Memories. Travel with Velarova
                     </p>
 
                     <div className="hero-cta-row">
@@ -62,28 +62,28 @@ function Home() {
                 </div>
             </div>
 
-            {/* Floating trust strip */}
-            {/* <div className="hero-trust-strip">
-                <div className="trust-badge-item">
-                    <span className="trust-num">10+</span>
-                    <span className="trust-lbl">Years Serving Kashmir</span>
+            {/* J&K Tourism Registration & Trust Strip */}
+            <div className="hero-trust-strip">
+                <div className="trust-badge-item trust-registered">
+                    <ShieldCheck size={20} className="trust-strip-icon" />
+                    <div>
+                        <span className="trust-num">J&K Tourism Registered</span>
+                        <span className="trust-lbl">Certificate No: JKEA00006144</span>
+                    </div>
                 </div>
                 <div className="trust-strip-divider"></div>
-                <div className="trust-badge-item">
-                    <span className="trust-num">15K+</span>
-                    <span className="trust-lbl">Happy Travelers</span>
+                <div className="trust-stats-row">
+                    <div className="trust-badge-item">
+                        <span className="trust-num">100%</span>
+                        <span className="trust-lbl">Local Native Team</span>
+                    </div>
+                    <div className="trust-stat-divider"></div>
+                    <div className="trust-badge-item">
+                        <span className="trust-num">4.9 ★</span>
+                        <span className="trust-lbl">Traveler Rating</span>
+                    </div>
                 </div>
-                <div className="trust-strip-divider"></div>
-                <div className="trust-badge-item">
-                    <span className="trust-num">100%</span>
-                    <span className="trust-lbl">Local Native Team</span>
-                </div>
-                <div className="trust-strip-divider"></div>
-                <div className="trust-badge-item">
-                    <span className="trust-num">4.9 ★</span>
-                    <span className="trust-lbl">Satisfaction Score</span>
-                </div>
-            </div> */}
+            </div>
 
             <TourPlans />
             <TravelLandingSection />

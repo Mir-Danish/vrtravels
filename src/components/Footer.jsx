@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, MapPin, Mail, Phone } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Mail, Phone, ShieldCheck } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -92,6 +92,11 @@ const Footer = () => {
           </div>
         </div>
 
+      </div>
+
+      <div className="footer-registration">
+        <ShieldCheck size={16} className="footer-reg-icon" />
+        <span>Registered with J&K Tourism Department — Certificate No: <strong>JKEA00006144</strong></span>
       </div>
 
       <div className="footer-copyright">

@@ -793,16 +793,38 @@
 }
 
 @media (max-width: 768px) {
+    .tour-gallery-page {
+        padding-top: 68px;
+    }
+
+    .gallery-hero {
+        height: 45vh;
+        min-height: 320px;
+    }
+
     .gallery-hero-content h1 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     .gallery-hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .gallery-hero-badge {
+        font-size: 0.82rem;
+        padding: 6px 14px;
     }
 
     .gallery-section-header h2 {
         font-size: 2rem;
+    }
+
+    .gallery-section-header p {
+        font-size: 0.95rem;
+    }
+
+    .gallery-main-section {
+        padding: 50px 5% 70px;
     }
 
     .gallery-photo-grid {
@@ -837,5 +859,259 @@
     .gallery-cta-btn {
         width: 100%;
         justify-content: center;
+    }
+
+    .gallery-cta-banner {
+        padding: 50px 5%;
+    }
+
+    .gallery-trust-bar {
+        padding: 18px 5%;
+        gap: 16px;
+    }
+
+    .gallery-trust-info strong {
+        font-size: 0.95rem;
+    }
+
+    .gallery-trust-info span {
+        font-size: 0.78rem;
+    }
+
+    .gallery-filters-wrapper {
+        gap: 8px;
+        margin-bottom: 35px;
+    }
+
+    .gallery-filter-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .gallery-stories-section {
+        padding: 60px 5%;
+    }
+
+    .modal-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-nav-btn.prev {
+        left: 10px;
+    }
+
+    .modal-nav-btn.next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-gallery-page {
+        padding-top: 62px;
+    }
+
+    .gallery-hero {
+        height: 40vh;
+        min-height: 280px;
+        padding: 0 16px;
+    }
+
+    .gallery-hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .gallery-hero-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .gallery-hero-badge {
+        font-size: 0.78rem;
+        padding: 5px 12px;
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+
+    .gallery-main-section {
+        padding: 40px 4% 50px;
+    }
+
+    .gallery-section-header {
+        margin-bottom: 28px;
+    }
+
+    .gallery-section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .gallery-section-header p {
+        font-size: 0.88rem;
+    }
+
+    .gallery-tag-pill {
+        font-size: 0.78rem;
+        padding: 5px 14px;
+    }
+
+    .gallery-photo-grid {
+        grid-auto-rows: 220px;
+        gap: 14px;
+    }
+
+    .gallery-card {
+        border-radius: 16px;
+    }
+
+    .card-location-badge {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+    }
+
+    .card-bottom-info h3 {
+        font-size: 1.05rem;
+    }
+
+    .card-bottom-info p {
+        font-size: 0.82rem;
+    }
+
+    .gallery-card-overlay {
+        padding: 14px 16px;
+    }
+
+    .card-expand-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .gallery-filters-wrapper {
+        gap: 6px;
+        margin-bottom: 28px;
+    }
+
+    .gallery-filter-btn {
+        padding: 7px 14px;
+        font-size: 0.82rem;
+        gap: 6px;
+    }
+
+    .filter-count {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+
+    /* Modal adjustments for small phones */
+    .gallery-modal-backdrop {
+        padding: 12px;
+    }
+
+    .gallery-modal-container {
+        border-radius: 18px;
+    }
+
+    .gallery-modal-header {
+        padding: 12px 16px;
+    }
+
+    .modal-counter {
+        font-size: 0.78rem;
+        padding: 3px 10px;
+    }
+
+    .modal-location {
+        font-size: 0.82rem;
+    }
+
+    .modal-close-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .gallery-modal-body {
+        max-height: 40vh;
+        min-height: 200px;
+    }
+
+    .modal-main-image {
+        max-height: 40vh;
+    }
+
+    .modal-nav-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .modal-nav-btn.prev {
+        left: 6px;
+    }
+
+    .modal-nav-btn.next {
+        right: 6px;
+    }
+
+    .gallery-modal-footer {
+        padding: 16px;
+    }
+
+    .modal-info-text h3 {
+        font-size: 1.1rem;
+    }
+
+    .modal-info-text p {
+        font-size: 0.85rem;
+    }
+
+    .modal-action-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Stories section */
+    .gallery-stories-section {
+        padding: 45px 4%;
+    }
+
+    .story-review-card {
+        padding: 22px 20px;
+        border-radius: 16px;
+    }
+
+    .story-quote-body {
+        font-size: 0.9rem;
+    }
+
+    .story-avatar {
+        width: 38px;
+        height: 38px;
+        font-size: 0.92rem;
+    }
+
+    .story-author-details strong {
+        font-size: 0.88rem;
+    }
+
+    .story-author-details span {
+        font-size: 0.78rem;
+    }
+
+    /* CTA */
+    .gallery-cta-banner {
+        padding: 40px 4%;
+    }
+
+    .gallery-cta-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-cta-text p {
+        font-size: 0.9rem;
+    }
+
+    .gallery-cta-btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
     }
 }

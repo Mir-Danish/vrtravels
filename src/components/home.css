@@ -12,7 +12,8 @@
     flex-direction: row;
     align-items: center;
     min-height: 100vh;
-    padding-top: 84px; /* account for fixed navbar */
+    padding-top: 84px;
+    /* account for fixed navbar */
     background-image: url('../assets/images/bgimage.png');
     background-size: cover;
     background-position: center;
@@ -24,12 +25,10 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        105deg,
-        rgba(15, 23, 42, 0.82) 0%,
-        rgba(15, 23, 42, 0.50) 55%,
-        rgba(15, 23, 42, 0.20) 100%
-    );
+    background: linear-gradient(105deg,
+            rgba(15, 23, 42, 0.82) 0%,
+            rgba(15, 23, 42, 0.50) 55%,
+            rgba(15, 23, 42, 0.20) 100%);
     z-index: 1;
 }
 
@@ -78,15 +77,46 @@
 /* Hero Heading */
 .p2 {
     font-family: 'Outfit', sans-serif;
-    font-size: 3.4rem;
+    font-size: 3.0rem;
     font-weight: 700;
     line-height: 1.2;
     color: #ffffff;
-    margin-bottom: 22px;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
 }
 
 .p2 span {
+    background: linear-gradient(135deg, #ffc977, #FAA935);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Welcome Sub-line */
+.hero-welcome-line {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.32rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 24px;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-welcome-line::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: #FAA935;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.hero-welcome-line span {
+    font-weight: 700;
     background: linear-gradient(135deg, #ffc977, #FAA935);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -224,6 +254,42 @@
     gap: 2px;
 }
 
+/* Registered badge — horizontal layout with icon */
+.trust-registered {
+    flex-direction: row;
+    gap: 12px;
+    background: rgba(250, 169, 53, 0.08);
+    border: 1px solid rgba(250, 169, 53, 0.25);
+    border-radius: 14px;
+    padding: 12px 22px;
+}
+
+.trust-registered .trust-num {
+    font-size: 0.95rem;
+    color: #FAA935;
+    letter-spacing: 0.3px;
+}
+
+.trust-registered .trust-lbl {
+    font-size: 0.82rem;
+    color: #e5e7eb;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.trust-registered div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2px;
+}
+
+.trust-strip-icon {
+    color: #34d399;
+    flex-shrink: 0;
+}
+
 .trust-num {
     font-family: 'Outfit', sans-serif;
     font-size: 1.7rem;
@@ -246,6 +312,18 @@
     background: rgba(255, 255, 255, 0.12);
 }
 
+.trust-stats-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.trust-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
 /* ==========================================================================
    Animations
    ========================================================================== */
@@ -254,6 +332,7 @@
         opacity: 0;
         transform: translateX(-24px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -261,64 +340,254 @@
 }
 
 /* ==========================================================================
-   Responsive
+   Responsive: Tablet & Mobile
    ========================================================================== */
 @media (max-width: 1024px) {
     .main-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         min-height: auto;
-        padding-bottom: 0;
+        padding-top: 84px;
+        padding-bottom: 20px;
     }
 
     .left-container {
-        padding: 60px 6% 30px;
+        padding: 50px 6% 24px;
         max-width: 100%;
     }
 
     .right-container {
         width: 100%;
         justify-content: center;
+        align-items: center;
         padding: 0 4% 40px;
-        gap: 10px;
+        gap: 14px;
     }
 
-    .image1, .image3, .videostyle {
+    .image1,
+    .image3,
+    .videostyle {
         width: 28vw;
-        height: 260px;
+        max-width: 175px;
+        height: 280px;
     }
 }
 
 @media (max-width: 768px) {
+    .main-container {
+        padding-top: 74px;
+    }
+
+    .left-container {
+        padding: 36px 5% 18px;
+    }
+
+    .p1 {
+        font-size: 0.82rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
     .p2 {
-        font-size: 2.4rem;
+        font-size: 2.1rem;
+        line-height: 1.22;
+        margin-bottom: 12px;
+    }
+
+    .hero-welcome-line {
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+        gap: 8px;
+    }
+
+    .hero-welcome-line::before {
+        width: 18px;
     }
 
     .p4 {
-        font-size: 1rem;
+        font-size: 0.94rem;
+        line-height: 1.65;
+        margin-bottom: 24px;
+        color: #e2e8f0;
+    }
+
+    .hero-location-badge {
+        font-size: 0.78rem;
+        padding: 6px 14px;
+        margin-bottom: 16px;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .hero-btn-primary {
+        padding: 13px 24px;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-rating-pill {
+        padding: 10px 16px;
+        font-size: 0.88rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right-container {
+        padding: 16px 5% 36px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image1,
+    .image3 {
+        width: 25vw;
+        max-width: 120px;
+        height: 220px;
+        border-radius: 16px;
+    }
+
+    .videostyle {
+        width: 32vw;
+        max-width: 160px;
+        height: 260px;
+        border-radius: 18px;
+    }
+
+    .hero-trust-strip {
+        padding: 22px 5%;
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .trust-strip-divider {
         display: none;
     }
 
-    .hero-trust-strip {
-        gap: 18px;
+    .trust-registered {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 14px;
+        gap: 12px;
+    }
+
+    .trust-registered .trust-num {
+        font-size: 0.88rem;
+    }
+
+    .trust-registered .trust-lbl {
+        font-size: 0.78rem;
+    }
+
+    .trust-stats-row {
+        display: flex;
+        align-items: center;
         justify-content: space-around;
+        width: 100%;
+    }
+
+    .trust-stat-divider {
+        width: 1px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .trust-num {
+        font-size: 1.45rem;
+    }
+
+    .trust-lbl {
+        font-size: 0.75rem;
     }
 }
 
-@media (max-width: 600px) {
-    .right-container {
-        display: none; /* Hide on very small screens to keep hero clean */
-    }
-
+@media (max-width: 540px) {
     .main-container {
-        min-height: 88vh;
+        padding-top: 70px;
     }
 
-    .hero-cta-row {
-        flex-direction: column;
-        align-items: flex-start;
+    .left-container {
+        padding: 28px 5% 12px;
+    }
+
+    .p2 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .hero-welcome-line {
+        font-size: 0.98rem;
+        margin-bottom: 16px;
+    }
+
+    .p4 {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    /* On smartphone screens: Show video prominently, hide the two side photos so nothing breaks */
+    .image1,
+    .image3 {
+        display: none;
+    }
+
+    .right-container {
+        padding: 12px 5% 32px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .videostyle {
+        width: 210px;
+        max-width: 70vw;
+        height: 340px;
+        border-radius: 20px;
+        border: 2.5px solid rgba(250, 169, 53, 0.7);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+        margin: 0;
+    }
+
+    .hero-trust-strip {
+        padding: 18px 4%;
+        gap: 14px;
+    }
+
+    .trust-registered {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .trust-registered .trust-num {
+        font-size: 0.84rem;
+    }
+
+    .trust-registered .trust-lbl {
+        font-size: 0.74rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .p2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-welcome-line {
+        font-size: 0.9rem;
+    }
+
+    .videostyle {
+        width: 190px;
+        height: 310px;
     }
 }

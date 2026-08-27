@@ -17,6 +17,16 @@ import {
 } from 'lucide-react';
 
 function AboutPage() {
+    const [travelQuery, setTravelQuery] = React.useState('');
+
+    const handleGetGuideOnWhatsApp = (e) => {
+        e.preventDefault();
+        const message = travelQuery.trim()
+            ? `Hello Velarova Tours, please send me the free Kashmir Travel Guide and popular itinerary packages! I am planning a trip: ${travelQuery.trim()}`
+            : "Hello Velarova Tours, please send me the free Kashmir Travel Guide and popular itinerary packages!";
+        window.open(`https://wa.me/919103115848?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div className="about-page-container">
             {/* Hero Section */}
@@ -230,13 +240,21 @@ function AboutPage() {
                             <span><CheckCircle2 size={16} color="#FAA935" /> Instant WhatsApp Assistance</span>
                         </div>
 
-                        <form className="connect-form" onSubmit={(e) => e.preventDefault()}>
-                            <input type="email" placeholder="Enter your email for a free Kashmir travel guide" required />
-                            <button type="submit">
-                                <span>Get Travel Guide</span>
-                                <Send size={16} />
+                        <form className="connect-form" onSubmit={handleGetGuideOnWhatsApp}>
+                            <input
+                                type="text"
+                                placeholder="Your name or travel dates (optional)"
+                                value={travelQuery}
+                                onChange={(e) => setTravelQuery(e.target.value)}
+                            />
+                            <button type="submit" className="btn-whatsapp-guide">
+                                <MessageCircle size={18} />
+                                <span>Get Guide on WhatsApp</span>
                             </button>
                         </form>
+                        <p className="connect-privacy-note">
+                            ⚡ Instant free delivery directly to your WhatsApp with customized itineraries.
+                        </p>
                     </div>
 
                     <div className="connect-contact-box">

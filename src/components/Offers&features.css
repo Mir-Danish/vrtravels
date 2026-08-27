@@ -148,9 +148,25 @@
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .page {
         padding: 60px 5%;
+    }
+
+    .tours h2 {
+        font-size: 2rem;
+        margin-bottom: 28px;
+    }
+
+    .tag {
+        font-size: 0.78rem;
+        padding: 4px 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .page {
+        padding: 50px 4%;
     }
 
     .tour-grid {
@@ -165,6 +181,38 @@
     }
 
     .tours h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .Place-Names {
+        font-size: 1.15rem;
+    }
+
+    .overlay span {
+        font-size: 0.82rem;
+    }
+
+    .overlay {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 40px 4%;
+    }
+
+    .tours h2 {
+        font-size: 1.6rem;
+        margin-bottom: 22px;
+    }
+
+    .tour-grid {
+        grid-auto-rows: 200px;
+        gap: 14px;
+    }
+
+    .tour {
+        border-radius: 16px;
     }
 }

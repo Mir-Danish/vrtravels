@@ -205,6 +205,40 @@
 }
 
 /* ==========================================================================
+   Footer Registration Badge
+   ========================================================================== */
+.footer-registration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(250, 169, 53, 0.06);
+    border: 1px solid rgba(250, 169, 53, 0.22);
+    border-radius: 50px;
+    padding: 12px 28px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 24px auto;
+}
+
+.footer-reg-icon {
+    color: #34d399;
+    flex-shrink: 0;
+}
+
+.footer-registration span {
+    font-size: 0.88rem;
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.footer-registration strong {
+    color: #FAA935;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+/* ==========================================================================
    Footer Copyright Strip
    ========================================================================== */
 .footer-copyright {
@@ -307,9 +341,33 @@
         font-size: 0.9rem;
     }
 
+    .footer-registration {
+        padding: 10px 16px;
+        border-radius: 12px;
+        gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-registration span {
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 1.45;
+    }
+
     .footer-copyright {
         padding-top: 20px;
+        padding-bottom: 45px;
         font-size: 0.82rem;
-        line-height: 1.5;
+        line-height: 1.6;
+        word-break: break-word;
+        padding-left: 15px;
+        padding-right: 55px;
+        box-sizing: border-box;
+    }
+
+    .footer-copyright p {
+        margin: 0;
+        padding: 0;
     }
 }
